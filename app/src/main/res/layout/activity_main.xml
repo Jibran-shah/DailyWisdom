@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dailywisdom.MainActivity"
+    android:background="@drawable/app_background">
+
+    <TextView
+        android:id="@+id/app_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:layout_marginTop="50dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quote_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/quote_background"
+        android:paddingBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@id/action_tv_ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_name_tv"
+        app:layout_constraintVertical_bias="0.41000003">
+
+        <ImageView
+            android:id="@+id/quotes_imv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:scaleX="-1"
+            android:src="@drawable/quotes_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/quote_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:text="@string/lorem"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"
+            app:layout_constraintTop_toBottomOf="@id/quotes_imv" />
+
+        <TextView
+            android:id="@+id/author_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem"
+            android:textSize="12sp"
+            android:textColor="@color/colorOnSurface"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/quote_tv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/share_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="share"
+        android:src="@drawable/share_ic"
+        android:layout_marginHorizontal="22dp"
+        app:layout_constraintTop_toBottomOf="@id/quote_container"
+        app:layout_constraintEnd_toEndOf="@id/quote_container"
+        app:layout_constraintBottom_toBottomOf="@id/quote_container"
+        />
+
+    <LinearLayout
+        android:id="@+id/action_tv_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/previous_imv"
+        app:layout_constraintEnd_toStartOf="@id/next_imv"
+        android:layout_marginHorizontal="4dp"
+        >
+        <TextView
+            android:id="@+id/previous_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/previous"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorOnSecondary"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/next_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textColor="@color/colorOnSecondary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/previous_imv"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="22dp"
+        android:src="@drawable/left_arrow_ic"
+        app:layout_constraintBottom_toBottomOf="@id/action_tv_ll"
+        app:layout_constraintEnd_toStartOf="@id/action_tv_ll"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/action_tv_ll"
+        android:scaleType="centerInside"
+        />
+
+    <ImageView
+        android:id="@+id/next_imv"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginRight="22dp"
+        android:src="@drawable/right_arrow_ic"
+        app:layout_constraintTop_toTopOf="@id/action_tv_ll"
+        app:layout_constraintBottom_toBottomOf="@id/action_tv_ll"
+        app:layout_constraintStart_toEndOf="@id/action_tv_ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerInside"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
