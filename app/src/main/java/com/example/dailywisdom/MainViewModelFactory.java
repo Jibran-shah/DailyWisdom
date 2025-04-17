@@ -14,11 +14,15 @@ public class MainViewModelFactory implements ViewModelProvider.Factory {
         context = ctx;
     }
 
+
     @NonNull
     @Override
+    @SuppressWarnings("unchecked")
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        if (modelClass.isAssignableFrom(MainViewModel.class)) {
-            return (T) new MainViewModel(context);
+        if (modelClass == MainViewModel.class) {
+            MainRepository repository = new MainRepository(context);
+            MainViewModel mainViewModel = new MainViewModel(repository);
+            return (T) mainViewModel;
         }
         throw new IllegalArgumentException("Unknown ViewModel class");
     }

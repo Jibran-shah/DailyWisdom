@@ -9,4 +9,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <item name="card.background" type="drawable">@drawable/quote_background_night</item>
+    <item name="image.tint" type="color">@color/white</item>
 </resources>

@@ -4,11 +4,12 @@
         Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat.
     </string>
-    <string name="next">next</string>
-    <string name="previous">previous</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
     <string name="app_title">DailyWisdom</string>
+    <string name="next_action_icon">next action icon</string>
+    <string name="previous_action_icon">previous action icon</string>
+    <string name="quotes">quotes</string>
+    <string name="share">share</string>
 </resources>

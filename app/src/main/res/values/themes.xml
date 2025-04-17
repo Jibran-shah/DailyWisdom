@@ -25,5 +25,7 @@
     </style>
 
     <style name="Theme.Quotes" parent="Base.Theme.Quotes" />
+    <item name="card.background" type="drawable">@drawable/quote_background</item>
+    <item name="image.tint" type="color">@color/black</item>
 
 </resources>
